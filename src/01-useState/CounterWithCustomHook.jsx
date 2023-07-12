@@ -1,4 +1,3 @@
-import React from 'react'
 import { useCounter } from '../Hooks/useCounter'
 
 const CounterWithCustomHook = () => {
