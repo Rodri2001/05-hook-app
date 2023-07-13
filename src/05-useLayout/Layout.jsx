@@ -1,10 +1,11 @@
+import { Loading } from "../03-examples/Loading";
+import { Quote } from "../03-examples/Quote";
 import { useCounter,useFetch } from "../hooks";
-import { Loading } from "./Loading";
-import { Quote } from "./Quote";
 
-export const MultipleCustomHooks = () => {
-  const { counter, increment, decrement } = useCounter(1);
-  const { data, isLoading, hasError } = useFetch(
+
+export const Layaout = () => {
+  const { counter, increment,  } = useCounter(1);
+  const { data, isLoading, } = useFetch(
     `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`
   );
   const { author, quote } = !!data && data[0];
