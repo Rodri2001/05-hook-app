@@ -3,22 +3,22 @@ import { ShowIncrement } from './ShowIncrement'
 
 export const CallBackhook = () => {
     
+  const [counter, setCounter] = useState(10)
    const incrementFather = useCallback(
-      () => {
-        setCounter((value) => value + 1)
+      (value) => {
+        setCounter((c) => c + value)
       },
       [],
     )
     
 
-    const [counter, setCounter] = useState(10)
    
   
     return (
         <>
             <h1>CallBackhook: {counter} </h1>
             <hr />
-            <button onClick={incrementFather}>incrementar</button>
+            <ShowIncrement increment={incrementFather}/>
         </>
     )
 }
